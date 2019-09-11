@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/display/display",
+    "pages/cinema/cinema",
+    "pages/ilook/ilook"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#777777",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7f7",
+    "position": "top",
+    "list": [
+      {
+        "text": "上映",
+        "pagePath": "pages/display/display"
+      },
+      {
+        "text": "影院",
+        "pagePath": "pages/cinema/cinema"
+      },
+      {
+        "text": "我看",
+        "pagePath": "pages/ilook/ilook"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+
+}

@@ -1,0 +1,9 @@
+/* pages/display/display.wxss */
+.slide swiper {
+  height: 500rpx;
+}
+
+.slide swiper image {
+  height: 100%;
+  width: 100%;
+}

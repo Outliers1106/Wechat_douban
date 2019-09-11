@@ -1,0 +1,11 @@
+<!--pages/display/display.wxml-->
+<view class="container">
+  <view class="slide">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="1000">
+    <swiper-item wx:for="{{displays[0].movies}}" wx:key="id">
+      <image src="{{item.images.large}}" mode="aspectFill"/> 
+    </swiper-item>
+  </swiper>
+  </view>
+</view>
+
