@@ -2,7 +2,8 @@
   "pages": [
     "pages/display/display",
     "pages/cinema/cinema",
-    "pages/ilook/ilook"
+    "pages/ilook/ilook",
+    "pages/moviedetail/moviedetail"
 
   ],
   "permission": {
