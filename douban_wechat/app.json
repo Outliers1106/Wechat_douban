@@ -2,9 +2,15 @@
   "pages": [
     "pages/display/display",
     "pages/cinema/cinema",
-    "pages/ilook/ilook"
+    "pages/ilook/ilook",
+    "pages/moviedetail/moviedetail"
 
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
