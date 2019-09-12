@@ -1,2 +1,9 @@
 <!--pages/cinema/cinema.wxml-->
-<text>pages/cinema/cinema.wxml</text>
+<view wx:for="{{cinemas}}" wx:for-index="idx" wx:for-item="cinema">
+  <view class="cinema">
+      <text class="cinema-title">名称：{{cinema.title}}</text>
+      <text class="cinema-address">地点：{{cinema.address}}</text>
+      <text class="cinema-telephone">联系方式：{{cinema.telephone}}</text>
+  </view>
+</view>
+

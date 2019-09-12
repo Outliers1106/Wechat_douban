@@ -18,7 +18,9 @@ App({
   data: {
     name: 'Douban Movie',
     version: '0.1.0',
-    currentCity: '威海'
+    currentCity: '威海',
+    curLatitude: '37.50212',
+    curLongitude:'122.12348',
   },
 
   /**

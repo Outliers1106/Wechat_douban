@@ -1,18 +1,39 @@
 // pages/cinema/cinema.js
+var bmap = require('../../libs/bmap-wx.min.js');
+var wxMarkerData = [];
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cinemas:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+        var that = this;
+        var BMap = new bmap.BMapWX({
+          ak: 'B61195334f65b9e4d02ae75d24fa2c53'
+        });
+        var fail = function(data) {
+          console.log(data);
+        };
+        var success = function(data) {
+          wxMarkerData = data.wxMarkerData;
+          that.setData({
+            cinemas: wxMarkerData
+          });
+        }
+        BMap.search({
+            "query": '影院',
+            fail: fail,
+            success: success,
+            iconPath: '../../img/marker_red.png',
+            iconTapPath: '../../img/marker_red.png'
+        });
   },
 
   /**

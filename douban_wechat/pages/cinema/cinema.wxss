@@ -1,1 +1,8 @@
 /* pages/cinema/cinema.wxss */
+.cinema {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+}
