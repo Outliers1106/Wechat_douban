@@ -1,7 +1,7 @@
 <!-- 渲染普通的单项数据 -->
 <!-- 例如：https://api.douban.com/v2/movie/top250?count=1 -->
 <template name="item_movies">
-  <navigator url="../item/item?id={{ item.id }}">
+  <navigator url="../moviedetail/moviedetail?id={{ item.id }}">
     <view class="item">
       <image class="poster" src="{{ item.images.small }}"/>
       <view class="meta">
