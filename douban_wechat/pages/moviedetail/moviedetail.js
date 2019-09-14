@@ -18,7 +18,10 @@ Page({
     navScrollLeft:0,
     seatArray: [['1排', '2排', '3排', '4排', '5排', '6排', '7排', '8排'],
       ['1列', '2列', '3列', '4列', '5列', '6列', '7列', '8列', '9列', '10列']],
-    seatIndex:[0,0]
+    seatIndex:[0,0],
+    seat: '1排1列',
+    date: '2019-09-20',
+    time: '12:00',
 
 
 
@@ -32,11 +35,24 @@ Page({
     */
 
   },
+
+  buyticket:function(e){
+    console.log(e.target.dataset.time)
+    console.log(e.target.dataset.date)
+    console.log(e.target.dataset.movie)
+    this.seat = (e.target.dataset.seat1+1) +'排' +(e.target.dataset.seat2+1)+'列'
+    var ticketinfo = e.target.dataset.movie + ' ' + e.target.dataset.date + ' ' + e.target.dataset.time+' '+this.seat
+    app.data.myticket.push(ticketinfo)
+    console.log(app.data.myticket)
+    console.log(this.seat)
+  },
+
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       seatIndex: e.detail.value
     })
+
   },
   bindTimeChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)

@@ -83,9 +83,13 @@
 .tab-box{
     color:green;
     padding-top: 80rpx;
-    height: 1000rpx;
+    height: 1200rpx;
    
 }
 .tab-content{
     overflow-y: scroll;
+}
+.picker{
+    padding: 5px;
+    color:black;
 }

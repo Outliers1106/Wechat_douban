@@ -21,6 +21,9 @@ App({
     currentCity: '威海',
     curLatitude: '37.50212',
     curLongitude:'122.12348',
+    myticket:[
+      '名侦探柯南 2019-9-20 12:00 1列1排',
+    ]
   },
 
   /**

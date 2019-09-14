@@ -37,28 +37,30 @@
     </view>
     
     <view class="section">
-      <view class="section__title">选择座位</view>
+      
       <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{seatIndex}}" range="{{seatArray}}">
         <view class="picker">
-         当前选择：{{seatArray[0][seatIndex[0]]}}，{{seatArray[1][seatIndex[1]]}}
+         座位选择：{{seatArray[0][seatIndex[0]]}}，{{seatArray[1][seatIndex[1]]}}
          </view>
        </picker>
-       <view class="section__title">时间选择器</view>
-       <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+       
+       <picker mode="time" value="{{time}}" start="09:00" end="21:00" bindchange="bindTimeChange">
         <view class="picker">
-          当前选择: {{time}}
+          时间选择:   {{time}}
         </view>
       </picker>
-      <view class="section__title">日期选择器</view>
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      
+        <picker mode="date" value="{{date}}" start="2019-09-01" end="2020-09-01" bindchange="bindDateChange">
           <view class="picker">
-           当前选择: {{date}}
+           日期选择:   {{date}}
           </view>
         </picker>
     </view>
-
-
-    <button type="primary" size="default" bindtap="buyticket"> 选座购票 </button>
+    <!-->通过data-xxx 把变量传递给 buyticket 函数  在函数中使用 e.target.dataset.xxx 获取变量值<-->
+    <button type="primary" size="default" bindtap="buyticket" 
+    data-date="{{date}}" data-time="{{time}}" data-seat1="{{seatIndex[0]}}" data-seat2="{{seatIndex[1]}}" data-movie="{{movie.title}}"> 
+    选座购票 
+    </button>
 
   </view>
   <view wx:elif="{{item.text=='海报'}}">
