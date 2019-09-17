@@ -1,9 +1,24 @@
 <!--pages/cinema/cinema.wxml-->
-<view wx:for="{{cinemas}}" wx:for-index="idx" wx:for-item="cinema">
+<view>
+  <text>我常去的影院：</text>
+</view>
+<view wx:for="{{mycinemas}}" wx:for-index="idx" wx:for-item="cinema">
   <view class="cinema">
       <text class="cinema-title">名称：{{cinema.title}}</text>
       <text class="cinema-address">地点：{{cinema.address}}</text>
       <text class="cinema-telephone">联系方式：{{cinema.telephone}}</text>
   </view>
 </view>
+<view>
+  <text>附近的影院：</text>
+</view>
+<navigator url="../cinemadetail/cinemadetail">
+  <view wx:for="{{cinemas}}" wx:for-index="idx" wx:for-item="cinema">
+    <view class="cinema">
+        <text class="cinema-title">名称：{{cinema.title}}</text>
+        <text class="cinema-address">地点：{{cinema.address}}</text>
+        <text class="cinema-telephone">联系方式：{{cinema.telephone}}</text>
+    </view>
+  </view>
+</navigator>
 

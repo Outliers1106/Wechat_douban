@@ -2,6 +2,7 @@
   "pages": [
     "pages/display/display",
     "pages/cinema/cinema",
+    "pages/cinemadetail/cinemadetail",
     "pages/ilook/ilook",
     "pages/moviedetail/moviedetail"
 
