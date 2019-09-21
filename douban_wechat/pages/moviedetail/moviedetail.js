@@ -22,6 +22,9 @@ Page({
     seat: '1排1列',
     date: '2019-09-20',
     time: '12:00',
+    score: ['1分', '2分', '3分', '4分', '5分', '6分', '7分', '8分', '9分', '10分',],
+    scoreindex:0,
+    comment:'',
 
 
 
@@ -46,7 +49,29 @@ Page({
     console.log(app.data.myticket)
     console.log(this.seat)
   },
+  submitscore:function(e){
+    var scoreinfo=e.target.dataset.movie+' '+(parseInt(e.target.dataset.score)+1)+'分'
+    app.data.myscore.push(scoreinfo)
+    console.log(app.data.myscore)
+  },
+  inputtextarea:function(e){
+    var value = e.detail.value;
+    this.setData({
+      comment:value
+    })
+  },
+  submitcomment:function(e){
+    var value=e.target.dataset.movie+' '+e.target.dataset.comment
+    app.data.mycomment.push(value)
+    console.log(app.data.mycomment)
+  },
 
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      scoreindex: e.detail.value
+    })
+  },
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({

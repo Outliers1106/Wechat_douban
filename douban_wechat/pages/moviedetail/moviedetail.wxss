@@ -93,3 +93,19 @@
     padding: 5px;
     color:black;
 }
+
+.textarea-class{
+
+  border: 1px black solid;
+
+  margin: auto;
+
+  width:90%;
+
+  height: 5em;
+
+  margin-top:5px;
+
+  padding: 3px;
+
+}

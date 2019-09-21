@@ -68,14 +68,27 @@
   </view>
 
   <view wx:elif="{{item.text=='短评'}}">
+  <textarea class="textarea-class" placeholder="请在此输入评论" bindinput="inputtextarea"/>
+  <button type="primary" size="default" bindtap="submitcomment" 
+    data-movie="{{movie.title}}" data-comment="{{comment}}"> 
+    确定
+  </button>
   </view>
 
   <view wx:elif="{{item.text=='评分'}}">
+  <view class="section__title">请为该电影评分</view>
+  <picker bindchange="bindPickerChange" value="{{scoreindex}}" range="{{score}}">
+    <view class="picker">
+      当前评分：{{score[scoreindex]}}
+    </view>
+  </picker>
+  <button type="primary" size="default" bindtap="submitscore" 
+    data-score="{{scoreindex}}" data-movie="{{movie.title}}"> 
+    确定
+  </button>
+
   </view>
   </swiper-item>
-
-
   </swiper>
 
 </view>
-
