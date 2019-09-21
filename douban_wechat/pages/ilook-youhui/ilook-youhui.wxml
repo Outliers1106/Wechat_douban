@@ -1,0 +1,8 @@
+<!--pages/ilook-youhui/ilook-youhui.wxml-->
+<import src ="../template/ticket-list"/>
+
+<view class="page__hd">
+    <view class="page__title">我的优惠券</view>
+</view>
+
+<template is="ticket-list" data="{{ type }}"/>

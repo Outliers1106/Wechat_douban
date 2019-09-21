@@ -1,2 +1,24 @@
-<!--pages/ilook/ilook.wxml-->
-<text>pages/ilook/ilook.wxml</text>
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">我看页面</view>
+    </view>
+    <view class="page__bd">
+
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="../ilook-myticket/ilook-myticket" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我的电影票</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="../ilook-duihuan/ilook-duihuan" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我的兑换券</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="../ilook-youhui/ilook-youhui" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我的优惠券</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+    </view>
+</view>

@@ -4,8 +4,10 @@
     "pages/cinema/cinema",
     "pages/cinemadetail/cinemadetail",
     "pages/ilook/ilook",
-    "pages/moviedetail/moviedetail"
-
+    "pages/moviedetail/moviedetail",
+    "pages/ilook-myticket/ilook-myticket",
+    "pages/ilook-duihuan/ilook-duihuan",
+    "pages/ilook-youhui/ilook-youhui"
   ],
   "permission": {
     "scope.userLocation": {

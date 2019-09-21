@@ -1,0 +1,8 @@
+<!--pages/ilook-myticket/ilook-myticket.wxml-->
+<import src ="../template/ticket-list"/>
+
+<view class="page__hd">
+    <view class="page__title">我的电影票</view>
+</view>
+
+<template is="ticket-list" data="{{ type }}"/>
