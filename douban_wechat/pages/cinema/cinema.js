@@ -1,6 +1,7 @@
 // pages/cinema/cinema.js
 var bmap = require('../../libs/bmap-wx.min.js');
 var wxMarkerData = [];
+const app = getApp()
 Page({
 
   /**
@@ -8,22 +9,7 @@ Page({
    */
   data: {
     cinemas:[],
-    mycinemas: [
-      { id: 0, 
-        latitude: 37.503220377766, 
-        longitude: 122.1193809154, 
-        title: "横店影城(苏宁电器店)", 
-        address: "山东省威海市环翠区和平路6号苏宁电器广场负1层",
-        telephone: "(0631)3965678"
-      },
-      { id: 1, 
-        latitude: 37.50803051716, 
-        longitude: 122.11279463061, 
-        title: "威海移动电影城",
-        address: "威海市少年路4号(青少年宫北市，电影公司北门，大世界北门，西鑫城大厦西50米)",
-        telephone: "(0631)5232510"
-      }
-    ],
+    mycinemas: [],
   },
 
   /**
@@ -50,6 +36,10 @@ Page({
             success: success,
             iconPath: '../../img/marker_red.png',
             iconTapPath: '../../img/marker_red.png'
+        });
+
+        that.setData({
+          mycinemas:app.data.mycinemas,
         });
   },
 

@@ -1,24 +1,60 @@
 <!--pages/cinema/cinema.wxml-->
-<view>
-  <text>我常去的影院：</text>
-</view>
-<view wx:for="{{mycinemas}}" wx:for-index="idx" wx:for-item="cinema">
-  <view class="cinema">
-      <text class="cinema-title">名称：{{cinema.title}}</text>
-      <text class="cinema-address">地点：{{cinema.address}}</text>
-      <text class="cinema-telephone">联系方式：{{cinema.telephone}}</text>
-  </view>
-</view>
-<view>
-  <text>附近的影院：</text>
-</view>
-<navigator url="../cinemadetail/cinemadetail">
-  <view wx:for="{{cinemas}}" wx:for-index="idx" wx:for-item="cinema">
-    <view class="cinema">
-        <text class="cinema-title">名称：{{cinema.title}}</text>
-        <text class="cinema-address">地点：{{cinema.address}}</text>
-        <text class="cinema-telephone">联系方式：{{cinema.telephone}}</text>
+<view class="page">
+    <!-->
+    <view class="page__hd">
     </view>
-  </view>
-</navigator>
+    <-->
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd">我常去的影院</view>
+          <view class="weui-panel__bd">
+              <view wx:for="{{mycinemas}}" wx:for-index="idx" wx:for-item="cinema">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">
+                      {{cinema.title}}
+                    </view>
+                    <view class="weui-media-box__desc">地点：{{cinema.address}}</view>
+                    <view class="weui-media-box__desc">联系方式：{{cinema.telephone}}</view>
+                </view>
+              </view>
+          </view>
+            <!-->
+            <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view>
+            <-->
+        </view>
+    </view>
+
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd">附近的影院</view>
+          <view class="weui-panel__bd">
+              <view wx:for="{{cinemas}}" wx:for-index="idx" wx:for-item="cinema">
+                <navigator url="../cinemadetail/cinemadetail">
+                  <view class="weui-media-box weui-media-box_text">
+                      <view class="weui-media-box__title weui-media-box__title_in-text">
+                        {{cinema.title}}
+                      </view>
+                      <view class="weui-media-box__desc">地点：{{cinema.address}}</view>
+                      <view class="weui-media-box__desc">联系方式：{{cinema.telephone}}</view>
+                  </view>
+                </navigator>
+              </view>
+          </view>
+            <!-->
+            <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view>
+            <-->
+        </view>
+    </view>
+
+</view>
 
