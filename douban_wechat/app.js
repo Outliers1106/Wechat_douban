@@ -22,7 +22,12 @@ App({
     curLatitude: '37.50212',
     curLongitude:'122.12348',
     myticket:[
-      '名侦探柯南 2019-9-20 12:00 1列1排',
+      {
+        movie: '名侦探柯南',
+        date: '2019-9-20',
+        time: '12:00',
+        seat: '1列1排'
+      }
     ],
     myscore:[
       '名侦探柯南 10分',

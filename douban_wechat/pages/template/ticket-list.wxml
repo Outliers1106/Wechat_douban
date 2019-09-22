@@ -1,25 +1,28 @@
 <!--ticket.wxml-->
 <template name="item-myticket">
     <view class="page__bd">
+      <view wx:for="{{myticket}}" wx:for-item="ticket" wx:for-id="id">
         <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">电影名</view>
-                    <view class="weui-form-preview__value_in-hd">罗小黑战记</view>
+                    <view class="weui-form-preview__value_in-hd">{{ticket.movie}}</view>
                 </view>
             </view>
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">时间</view>
-                    <view class="weui-form-preview__value">2019-08-16 14:35</view>
+                    <view class="weui-form-preview__value">{{ticket.date}} {{ticket.time}}</view>
                 </view>
+                <!-->
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">影院</view>
                     <view class="weui-form-preview__value">威海新世纪影城</view>
                 </view>
+                <-->
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">座位</view>
-                    <view class="weui-form-preview__value">5号激光厅 6排7座</view>
+                    <view class="weui-form-preview__value">{{ticket.seat}}</view>
                 </view>
             </view>
             <!-->
@@ -31,7 +34,8 @@
                 <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
             </view>
             <-->
-        </view>
+        </view>      
+      </view>
     </view>
 </template>
 
@@ -87,7 +91,7 @@
   <view class="display">
     <!--这里根据ilook页面选择的票类型，选择跳转到不同的票种的list模板-->
     <view wx:if="{{type==1}}">
-      <template is="item-myticket"/>
+      <template is="item-myticket" data="{{ myticket }}" wx/>
     </view>
     <view wx:if="{{type==2}}">
       <template is="item-ticket" data="{{ type }}"/>
@@ -95,6 +99,7 @@
     <view wx:if="{{type==3}}">
       <template is="item-ticket" data="{{ type }}"/>
     </view>
+    <!-->
     <view class="tips">
       <view wx:if="{{ hasMore }}">
         <image src="/images/loading.gif" mode="aspectFill"/>
@@ -104,5 +109,6 @@
         <text>没有更多内容了</text>
       </view>
     </view>
+    <-->
   </view>
 </template>

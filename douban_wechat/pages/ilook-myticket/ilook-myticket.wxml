@@ -5,4 +5,4 @@
     <view class="page__title">我的电影票</view>
 </view>
 
-<template is="ticket-list" data="{{ type }}"/>
+<template is="ticket-list" data="{{ type, myticket }}"/>

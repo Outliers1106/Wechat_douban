@@ -44,7 +44,17 @@ Page({
     console.log(e.target.dataset.date)
     console.log(e.target.dataset.movie)
     this.seat = (e.target.dataset.seat1+1) +'排' +(e.target.dataset.seat2+1)+'列'
+    var ticketinfo = {
+      movie : e.target.dataset.movie,
+      date  : e.target.dataset.date,
+      time  : e.target.dataset.time,
+      seat  : this.seat
+    }
+
+    /*
     var ticketinfo = e.target.dataset.movie + ' ' + e.target.dataset.date + ' ' + e.target.dataset.time+' '+this.seat
+    */
+
     app.data.myticket.push(ticketinfo)
     console.log(app.data.myticket)
     console.log(this.seat)

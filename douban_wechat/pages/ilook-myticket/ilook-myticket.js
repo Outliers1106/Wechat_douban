@@ -1,4 +1,5 @@
 // pages/ilook-myticket/ilook-myticket.js
+const app = getApp()
 Page({
 
   /**
@@ -6,13 +7,15 @@ Page({
    */
   data: {
     type:1,
+    myticket:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    that.setData({myticket:app.data.myticket});
   },
 
   /**
